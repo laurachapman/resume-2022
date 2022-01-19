@@ -1,5 +1,7 @@
 # Laura's software engineering resume
 
+Now it can be your resume too.
+
 ## How to use
 
 ### Prerequisite
