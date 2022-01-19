@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
+
+\begin{document}
+
+\name{Laura Chapman}
+\tagline{Associate Software Engineer}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{lc.chapman5@gmail.com }
+      \phone{9146409318}
+    \linkedin{linkedin.com/in/laurachapman/}
+ \homepage{laurachapman.github.io}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+% \statement{Highly motivated and detail-oriented software engineer with excellent communication skills. Looking for a role in a fast-paced environment solving cool problems with smart people.}
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+% \cvsection[page1sidebar]{Experience}
+\begin{fullwidth}
+\cvsection{Experience}
+\cvevent{Software Engineer II}{Google}{June 2021 -- Present}{Washington, DC}
+\begin{itemize}
+\item Working on Economic Security team within Google Search.
+\item Building search features for government services and food assistance. 
+\end{itemize}
+\vspace{6pt}
+\cvevent{Associate Software Engineer}{Capital One}{August 2020 -- June 2021}{Boston, MA}
+\begin{itemize}
+\item Spearheaded development of major new feature on a treasury management application in Scala/Typescript/React.
+\item Built utilities to increase team's efficiency, migrated projects to new AWS account, and contributed to documentation.
+\item Led demonstrations and discussions with business partners and tech teams. 
+\end{itemize}
+\vspace{6pt}
+\cvevent{Teaching Fellow}{Harvard Department of Computer Science}{September 2019 -- August 2020}{Cambridge, MA}
+\begin{itemize}
+\item Courses: CS171: Visualization, CS10: Elements of Data Science, and CS1: Introduction to Programming with Python.
+\item Taught section, assisted in labs and lectures, graded assignments, mentored students and held office hours. 
+\item Earned Harvard Certificate of Distinction in Teaching. 
+\end{itemize}
+\vspace{6pt}
+\cvevent{Software Engineering Intern}{Capital One}{June 2019 -- August 2019}{New York, NY}
+\begin{itemize}
+\item Created an interactive network visualization using JavaScript/D3 for an internal web application. 
+\item Constructed data pipeline, optimized performance, and built visualization code into a flexible library. 
+\item Named a "super performer" by manager and received return offer.
+\end{itemize}
+\vspace{6pt}
+\cvsection{Skills}
+\textbf{\color{accent}Languages/libraries:}
+\cvtag{Scala}
+\cvtag{React}
+\cvtag{JS/TS}
+\cvtag{Python}
+\cvtag{HTML}
+\cvtag{CSS}
+\cvtag{SQL}
+\cvtag{D3.js}
+\cvtag{OCaml}
+\cvtag{C}
+\cvtag{ZIO}
+\vspace{3pt}
+
+\textbf{\color{accent}Technologies:}
+\cvtag{AWS}
+\cvtag{Jenkins}
+\cvtag{Git}
+\cvtag{Docker}
+\cvtag{Jira}
+\cvtag{Kanban}
+\medskip
+
+\cvsection{Personal projects}
+\begin{itemize}
+\item \textfb{\color{accent}Solving \textit{Are You the One?} With Functional Scala}- applying dynamic programming/constraint satisfaction to a dating show
+\item \textfb{\color{accent}Ranked Choice Voting with Harvard Chicken Dishes}- visually exploring ranked choice voting with chicken preferences
+\item \textfb{\color{accent}Computer generated art and Instagram bot}- creating content and building a following semi-automatically
+\end{itemize}
+For links and more, visit \textbf{\color{accent}laurachapman.github.com/nerdy}
+\medskip
+
+\cvsection{Education}
+\cvevent{Bachelor's in Computer Science, Minor in Physics, 3.78 GPA}{Harvard University}{2016 -- 2020}{Cambridge, MA}{\textfb{\color{accent}Coursework: }Compilers, Theoretical Computer Science, Data Structures and Algorithms, Systems Programming and Machine Organization, Visualization, Introduction to Artificial Intelligence with Python}
+
+\medskip
+\end{fullwidth}
+
+\end{document}
